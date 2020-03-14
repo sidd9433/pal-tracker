@@ -51,7 +51,7 @@ public class TimeEntryController {
     }
 
     @PostMapping
-    public ResponseEntity<TimeEntry> create(TimeEntry timeEntryToCreate) {
+    public ResponseEntity<TimeEntry> create(@RequestBody TimeEntry timeEntryToCreate) {
         return new ResponseEntity<>(timeEntryRepository.create(timeEntryToCreate), HttpStatus.CREATED);
     }
 }
