@@ -77,7 +77,6 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository {
                 "DELETE from time_entries WHERE id=?", id);
     }
 
-
     private final RowMapper<TimeEntry> rowMapper = (rs, rowNum) -> new TimeEntry(
             rs.getLong("id"),
             rs.getLong("project_id"),
